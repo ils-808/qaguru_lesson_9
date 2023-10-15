@@ -20,9 +20,10 @@ jobs:
       - name: Install dependencies
         run: |
           pytest --alluredir=allure-results
+
       - name: Install Chrome
-      - uses: browser-actions/setup-chrome@v1
-      - run: chrome --version
+        uses: browser-actions/setup-chrome@v1
+        run: chrome --version
 
       - name: Get Allure history
         uses: actions/checkout@v2
