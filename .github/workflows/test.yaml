@@ -17,13 +17,15 @@ jobs:
       - name: Install dependencies
         run: |
           pip install -r requirements.txt
-      - name: Install dependencies
-        run: |
-          pytest --alluredir=allure-results
 
       - name: Install Chrome
         uses: browser-actions/setup-chrome@v1
-        run: chrome --version
+        with:
+          version: '118*'
+
+      - name: Install dependencies
+        run: |
+          pytest --alluredir=allure-results
 
       - name: Get Allure history
         uses: actions/checkout@v2
