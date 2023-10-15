@@ -17,8 +17,10 @@ jobs:
       - name: Install Chrome
         uses: browser-actions/setup-chrome@v1
         with:
-          chrome-version: latestlatest
-        run: chrome --latest
+          chrome-version: latest
+      - name: Run Chrome
+        run: |
+          chrome --latest
       - name: Install dependencies
         run: |
           pip install -r requirements.txt
