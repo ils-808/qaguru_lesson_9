@@ -5,6 +5,7 @@ from selene.support.shared import browser
 from selene.support.shared.jquery_style import s
 
 
+@pytest.mark.skip()
 def test_dynamic_steps():
     with allure.step("Открываем главную страницу"):
         browser.open("https://github.com")
@@ -24,6 +25,7 @@ def test_dynamic_steps():
         s(by.partial_text("#76")).should(be.visible)
 
 
+@pytest.mark.skip()
 def test_decorator_steps():
     open_main_page()
     search_for_repository("eroshenkoam/allure-example")

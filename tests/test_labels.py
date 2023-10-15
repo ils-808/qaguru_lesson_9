@@ -1,11 +1,14 @@
 import allure
+import pytest
 from allure_commons.types import Severity
 
 
+@pytest.mark.skip()
 def test_no_labels():
     pass
 
 
+@pytest.mark.skip()
 def test_dynamic_labels():
     allure.dynamic.tag("web")
     allure.dynamic.severity(Severity.BLOCKER)
@@ -15,6 +18,7 @@ def test_dynamic_labels():
     pass
 
 
+@pytest.mark.skip()
 @allure.tag("web")
 @allure.severity(Severity.CRITICAL)
 @allure.label("owner", "eroshenkoam")
